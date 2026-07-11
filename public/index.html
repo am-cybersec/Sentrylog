@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SentryLog — Access Audit Console</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="scanline"></div>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark">◈</span>
+    <div>
+      <div class="brand-name">SentryLog</div>
+      <div class="brand-sub">Access Audit Console</div>
+    </div>
+  </div>
+  <div class="clock" id="clock">--:--:--</div>
+</header>
+
+<main>
+  <section class="stats-row" id="stats-row">
+    <div class="stat-card" data-key="totalUsers">
+      <div class="stat-label">Tracked Users</div>
+      <div class="stat-value">—</div>
+    </div>
+    <div class="stat-card" data-key="totalAttempts">
+      <div class="stat-label">Login Attempts</div>
+      <div class="stat-value">—</div>
+    </div>
+    <div class="stat-card danger" data-key="failedAttempts">
+      <div class="stat-label">Failed Attempts</div>
+      <div class="stat-value">—</div>
+    </div>
+    <div class="stat-card alert" data-key="unresolvedAlerts">
+      <div class="stat-label">Open Alerts</div>
+      <div class="stat-value">—</div>
+    </div>
+  </section>
+
+  <section class="panel-grid">
+
+    <div class="panel wide">
+      <div class="panel-head">
+        <h2>Login Attempts</h2>
+        <span class="panel-tag">live table</span>
+      </div>
+      <div class="table-wrap">
+        <table id="attempts-table">
+          <thead>
+            <tr><th>User</th><th>IP Address</th><th>Location</th><th>Time</th><th>Status</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <h2>Security Alerts</h2>
+        <span class="panel-tag">flagged</span>
+      </div>
+      <div class="alert-list" id="alert-list"></div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <h2>Brute-Force Signals</h2>
+        <span class="panel-tag">≥5 failed / IP</span>
+      </div>
+      <div class="table-wrap">
+        <table id="brute-table">
+          <thead><tr><th>IP Address</th><th>Location</th><th>Failed</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="panel wide">
+      <div class="panel-head">
+        <h2>Blacklisted-IP Attempts</h2>
+        <span class="panel-tag">high risk</span>
+      </div>
+      <div class="table-wrap">
+        <table id="blacklist-table">
+          <thead><tr><th>User</th><th>IP Address</th><th>Time</th><th>Status</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
