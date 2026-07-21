@@ -21,25 +21,7 @@ login-audit-project/
     └── script.js
 ```
 
-## VS Code mn kaise chalayen
 
-1. Ye folder VS Code mn open karo
-2. Terminal kholo (`Ctrl + ~`) aur run karo:
-   ```
-   npm install
-   ```
-3. Database banane ke liye (pehli baar, ya reset karne ke liye):
-   ```
-   node setup_db.js
-   ```
-4. Server start karo:
-   ```
-   node server.js
-   ```
-5. Browser mn kholo: **http://localhost:3000**
-
-> Note: Terminal mn ek warning aayegi — `ExperimentalWarning: SQLite is an experimental feature`.
-> Ye sirf warning hai, error nahi. Node.js v22+ chahiye hoga isliye (`node -v` se check kar lena).
 
 ## Database Schema (Tables)
 
