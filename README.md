@@ -4,7 +4,7 @@ Cybersecurity-themed full-stack project: login activity track karta hai, brute-f
 attempts detect karta hai, aur blacklisted IPs se login flag karta hai.
 
 ## Tech Stack
-- **Database:** SQLite (Node.js ka built-in `node:sqlite` module — koi extra install nahi chahiye)
+- **Database:** SQLite
 - **Backend:** Node.js + Express
 - **Frontend:** HTML, CSS, JavaScript (vanilla)
 
