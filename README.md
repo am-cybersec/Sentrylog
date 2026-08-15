@@ -11,9 +11,9 @@ attempts detect karta hai, aur blacklisted IPs se login flag karta hai.
 ## Folder Structure
 ```
 login-audit-project/
-├── setup_db.js       → database + tables + sample data banata hai
+├── setup_db.js       
 ├── server.js         → Express backend, API routes
-├── database.db       → SQLite database file (setup_db.js se generate hoti hai)
+├── database.db       → SQLite database file 
 ├── package.json
 └── public/
     ├── index.html     → dashboard UI
