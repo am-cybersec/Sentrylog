@@ -1,7 +1,7 @@
 # SentryLog — User Access & Login Audit System
 
-Cybersecurity-themed full-stack project: login activity track karta hai, brute-force
-attempts detect karta hai, aur blacklisted IPs se login flag karta hai.
+Cybersecurity-themed full-stack project: login activity tracker, brute-force
+attempts detector, blacklisted IPs login flag.
 
 ## Tech Stack
 - **Database:** SQLite
@@ -37,7 +37,3 @@ login-audit-project/
 - Blacklisted-IP login attempts flag
 - Security alerts list with "Mark resolved" action (POST request, `UPDATE` query)
 
-## Sample Data
-`setup_db.js` mn 5 users, 5 IPs, 14 login attempts (jisme ek brute-force pattern
-aur ek blacklisted-IP attempt included hai), aur 3 security alerts already daale
-hue hain — turant demo ke liye ready.
